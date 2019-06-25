@@ -15,10 +15,12 @@ class Pokemon extends React.Component {
     if(src !== null) return src
     if(obj.front_shiny_female === null) return src
   }
+
+  
   render() {
     return (
       <div>
-        You are a {this.props.pokemon.name}!
+        Congratulatios, you are a {this.props.pokemon.name}!
         <br></br><br></br><br></br><br></br>
 
           <img src={this.getPokemonImage(this.props.pokemon.sprites)} />

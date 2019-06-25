@@ -45,7 +45,7 @@ class App extends React.Component {
 
   getPokeData() {
     let pokemon = {};
-    for (let i = 1; i < 151; i++) {
+    for (let i = 1; i < 152; i++) {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
         .then(({ data }) => {
@@ -92,6 +92,7 @@ class App extends React.Component {
 
   pokemonSelector() {
     let random = Math.ceil(Math.random() * 151)
+    
     while(random > 151) {
       random = Math.ceil(Math.random() * 151)
     }

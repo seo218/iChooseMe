@@ -18,11 +18,17 @@ class Page3 extends React.Component {
           Select all that apply    
         </h2>        
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <Form.Check type="checkbox" label="test" />
+          <br></br><br></br>
           <button onClick={(e)=>{this.props.formComplete(e)}}>
             done
           </button>
