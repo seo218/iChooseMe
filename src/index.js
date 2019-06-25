@@ -4,6 +4,8 @@ import axios from "axios";
 import Page1 from "./components/page1.js";
 import Page2 from "./components/page2.js";
 import Page3 from "./components/page3.js";
+import Pokemon from "./components/pokemon.js";
+import Promise from 'bluebird'
 // import {Pagination} from 'react-bootstrap'
 
 class App extends React.Component {
@@ -18,13 +20,14 @@ class App extends React.Component {
       showPage3: false,
       page3: null,
       showPokemon: false,
-      yourPokemon: null
+      yourPokemon: {id:1}
     };
     this.getPokeData = this.getPokeData.bind(this);
     this.handlePage1Click = this.handlePage1Click.bind(this);
     this.handlePage2Click = this.handlePage2Click.bind(this);
     this.handlePage3Click = this.handlePage3Click.bind(this);
     this.pokemonSelector = this.pokemonSelector.bind(this);
+    this.handlePokemonButtonClick = this.handlePokemonButtonClick.bind(this)
   }
 
   componentDidMount() {
@@ -83,25 +86,55 @@ class App extends React.Component {
     this.setState({
       showPage3: !this.state.showPage3
     });
-    this.setState({
-      showPokemon: !this.state.showPokemon
-    });
     this.pokemonSelector();
+   
   }
 
   pokemonSelector() {
-    this.setState({
-      yourPokemon: this.state.pokemon[Math.ceil(Math.random() * 151)]
-    });
+    let random = Math.ceil(Math.random() * 151)
+    while(random > 151) {
+      random = Math.ceil(Math.random() * 151)
+    }
+    return new Promise((res, rej) => {
+      this.setState({
+        yourPokemon: this.state.pokemon[random]
+      });
+     res()
+    })
+    .then(() => {
+      return this.setState({
+        yourPokemon: <Pokemon 
+          pokemon={this.state.yourPokemon} 
+          formComplete={this.handlePokemonButtonClick}
+        />
+      });
+    })
+    .then(() => {
+      return this.setState({
+        showPokemon: !this.state.showPokemon
+      });
+    })
+    .catch((err) => {
+      return console.log('error in getting selecting your pokemon', err)
+    })
   }
 
+  handlePokemonButtonClick(e) {
+    e.preventDefault()
+    this.setState({
+      showPokemon: !this.state.showPokemon
+    })
+    this.setState({
+      showPage1: !this.state.showPage1
+    })
+  }
   render() {
     return (
       <div className="iChooseMe">
         {this.state.showPage1 ? this.state.page1 : null}
         {this.state.showPage2 ? this.state.page2 : null}
         {this.state.showPage3 ? this.state.page3 : null}
-        {this.state.showPokemon ? this.state.yourPokemon.id : null}
+        {this.state.showPokemon ? this.state.yourPokemon : null}
       </div>
     );
   }

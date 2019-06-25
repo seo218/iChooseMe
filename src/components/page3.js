@@ -11,7 +11,7 @@ class Page3 extends React.Component {
       <Form>
         <h1>
           <Badge variant='danger'>     
-           Deep seeded issues and mental health
+           Ex's and Mommy/Daddy Issues
           </Badge>
         </h1>
         <h2>
