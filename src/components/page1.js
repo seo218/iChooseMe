@@ -23,11 +23,7 @@ class Page1 extends React.Component {
           <Form.Check type="checkbox" label="test" />
           <Form.Check type="checkbox" label="test" />
           <Form.Check type="checkbox" label="test" />
-          <button 
-        //   variant='info' 
-          onClick={(e)=>{this.props.togglePage1(e)}}
-        //   onClick={(e)=>{this.props.toggelPage2()}}
-          >
+          <button onClick={(e)=>{this.props.formComplete(e)}}>
           done
           </button>
 

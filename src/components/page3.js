@@ -23,11 +23,8 @@ class Page3 extends React.Component {
           <Form.Check type="checkbox" label="test" />
           <Form.Check type="checkbox" label="test" />
           <Form.Check type="checkbox" label="test" />
-          <button 
-        //   variant='info' 
-          onClick={(e)=>{this.props.formComplete()}}
-          >
-          done
+          <button onClick={(e)=>{this.props.formComplete(e)}}>
+            done
           </button>
 
       </Form>

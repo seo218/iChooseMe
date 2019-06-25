@@ -29,8 +29,7 @@ class App extends React.Component {
     this.setState({
       page1: 
       <Page1 
-        togglePage1 = {this.handlePage1Click}
-        // togglePage2 = {this.handlePage2Click}
+        formComplete={this.handlePage1Click}
       />
     })
     this.setState({
@@ -66,20 +65,28 @@ class App extends React.Component {
   }
 
   handlePage1Click (e) {
-    console.log('handle page1 click ran')
     e.preventDefault()
     this.setState({
       showPage1: !this.state.showPage1
     })
-  }
-
-  handlePage2Click () {
     this.setState({
       showPage2: !this.state.showPage2
     })
   }
 
-  handlePage3Click () {
+  handlePage2Click (e) {
+    e.preventDefault()
+    this.setState({
+      showPage2: !this.state.showPage2
+    })
+    this.setState({
+      showPage3: !this.state.showPage3
+    })
+  }
+
+
+  handlePage3Click (e) {
+    e.preventDefault()
     this.setState({
       showPage3: !this.state.showPage3
     })
