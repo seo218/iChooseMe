@@ -20,7 +20,8 @@ class App extends React.Component {
       showPage3: false,
       page3: null,
       showPokemon: false,
-      yourPokemon: {id:1}
+      yourPokemon: {id:1},
+      stats: []
     };
     this.getPokeData = this.getPokeData.bind(this);
     this.handlePage1Click = this.handlePage1Click.bind(this);
@@ -28,6 +29,7 @@ class App extends React.Component {
     this.handlePage3Click = this.handlePage3Click.bind(this);
     this.pokemonSelector = this.pokemonSelector.bind(this);
     this.handlePokemonButtonClick = this.handlePokemonButtonClick.bind(this)
+    this.getStats=this.getStats.bind(this)
   }
 
   componentDidMount() {
@@ -127,6 +129,19 @@ class App extends React.Component {
     })
     this.setState({
       showPage1: !this.state.showPage1
+    })
+  }
+
+  getStats (pokeObj) {
+    let stats = []
+    for(let i = 0; i < pokeObj.stats.lenth; i ++) { 
+      let tupel = []
+      tupel.push(pokeObj.stats[i].stat)
+      tupel.push(pokoObj.stats[i].base_stat)
+      stats.push(tupel)
+    }
+    this.setState({
+        stats: stats
     })
   }
   render() {

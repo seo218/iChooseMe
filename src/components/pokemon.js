@@ -3,8 +3,11 @@ import React from "react";
 class Pokemon extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+        stats: []
+    };
     this.getPokemonImage=this.getPokemonImage.bind(this)
+    this.stats=this.stats.bind(this)
   }
 
   getPokemonImage (obj) {
@@ -16,16 +19,29 @@ class Pokemon extends React.Component {
     if(obj.front_shiny_female === null) return src
   }
 
-  
+  stats (pokeObj) {
+    let stats = []
+    for(let i = 0; i < pokeObj.stats.lenth; i ++) { 
+      let tupel = []
+      tupel.push(pokeObj.stats[i].stat)
+      tupel.push(pokoObj.stats[i].base_stat)
+      stats.push(tupel)
+    }
+    this.setState({
+        stats: stats
+    })
+  }
+
   render() {
     return (
       <div>
-        Congratulatios, you are a {this.props.pokemon.name}!
+        Congratulations, you are a {this.props.pokemon.name}!
         <br></br><br></br><br></br><br></br>
 
           <img src={this.getPokemonImage(this.props.pokemon.sprites)} />
       
         <br></br><br></br><br></br><br></br>
+       
         <button
           onClick={e => {
             this.props.formComplete(e);
