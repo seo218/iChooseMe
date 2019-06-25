@@ -16,22 +16,33 @@ class App extends React.Component {
   }
 
   getPokeData() {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/130`)
-      .then(data => {
-        console.log(data);
-      })
-      .catch(err => {
-        console.log("err in getting poke data client side", err);
-      });
+    let pokemon = {};
+
+    for (let i = 1; i < 151; i++) {
+      axios
+        .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
+        .then(({ data }) => {
+          pokemon[data.name] = data;
+          // console.log('logging data', data.name)
+          this.setState({
+            pokemon: pokemon
+          })
+        })
+        .catch(err => {
+          console.log("err in getting poke data client side", err);
+        });
+    }
+  //   return pokemon
+  //  .then((pokemon) => {
+  //    console.log('logging pokemon after api call', pokemon)
+  //    this.setState({
+  //      pokemon: pokemon
+  //    })
+  //  })
   }
-  
-  render () {
-      return (
-      <div className="iChooseMe">
-        react component rendering
-      </div>
-      )
+
+  render() {
+    return <div className="iChooseMe">react component rendering</div>;
   }
 }
 
