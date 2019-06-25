@@ -25,9 +25,10 @@ class App extends React.Component {
         console.log("err in getting poke data client side", err);
       });
   }
+  
   render() {
       return(
-      <div>
+      <div className="iChooseMe">
         component rendering   
       </div>
       )

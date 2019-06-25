@@ -4,9 +4,8 @@
   "description": "",
   "main": "sever/index.js",
   "scripts": {
-    "r-dev": "npx webpack --w src/index.jsx",
-    "s-dev": "nodemon server/index.js",
-    "build": "parcel build client/index.html client/index.jsx client/sytles.css --out-dir build --no-source-maps"
+    "start": "nodemon server/index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
