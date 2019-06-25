@@ -11,7 +11,7 @@ class Page3 extends React.Component {
       <Form>
         <h1>
           <Badge variant='danger'>     
-          If I had to I would
+          If I had to I would...
           </Badge>
         </h1>
         <h2>

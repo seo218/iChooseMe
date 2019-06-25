@@ -7,7 +7,6 @@ class Pokemon extends React.Component {
         stats: []
     };
     this.getPokemonImage=this.getPokemonImage.bind(this)
-    this.stats=this.stats.bind(this)
   }
 
   getPokemonImage (obj) {
@@ -19,7 +18,7 @@ class Pokemon extends React.Component {
     if(obj.front_shiny_female === null) return src
   }
 
-  stats (pokeObj) {
+  getStats (pokeObj) {
     let stats = []
     for(let i = 0; i < pokeObj.stats.lenth; i ++) { 
       let tupel = []
