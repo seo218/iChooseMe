@@ -1,6 +1,3 @@
+pokemon.pem
 node_modules
-.cache
-parcel
-parcel.cmd
-nodemon
-nodemon.cmd
+test1.js
