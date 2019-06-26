@@ -105,6 +105,9 @@ class App extends React.Component {
      res()
     })
     .then(() => {
+      this.getStats(this.state.yourPokemon)
+    })
+    .then(() => {
       return this.setState({
         yourPokemon: <Pokemon 
           pokemon={this.state.yourPokemon} 
@@ -134,10 +137,10 @@ class App extends React.Component {
 
   getStats (pokeObj) {
     let stats = []
-    for(let i = 0; i < pokeObj.stats.lenth; i ++) { 
+    for(let i = 0; i < pokeObj.stats.length; i ++) { 
       let tupel = []
-      tupel.push(pokeObj.stats[i].stat)
-      tupel.push(pokoObj.stats[i].base_stat)
+      tupel.push(pokeObj.stats[i].stat.name)
+      tupel.push(pokeObj.stats[i].base_stat)
       stats.push(tupel)
     }
     this.setState({
