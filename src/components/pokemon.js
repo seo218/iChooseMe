@@ -1,4 +1,5 @@
 import React from "react";
+import {Button, ListGroup} from 'react-bootstrap'
 
 class Pokemon extends React.Component {
   constructor(props) {
@@ -18,18 +19,6 @@ class Pokemon extends React.Component {
     if(obj.front_shiny_female === null) return src
   }
 
-  getStats (pokeObj) {
-    let stats = []
-    for(let i = 0; i < pokeObj.stats.lenth; i ++) { 
-      let tupel = []
-      tupel.push(pokeObj.stats[i].stat)
-      tupel.push(pokoObj.stats[i].base_stat)
-      stats.push(tupel)
-    }
-    this.setState({
-        stats: stats
-    })
-  }
 
   render() {
     return (
@@ -40,14 +29,24 @@ class Pokemon extends React.Component {
           <img src={this.getPokemonImage(this.props.pokemon.sprites)} />
       
         <br></br><br></br><br></br><br></br>
-       
-        <button
+          <ul>
+            <li>Stats</li>
+            <li>{`${this.props.stats[0][0]} ${this.props.stats[0][1]}`}</li>
+            <li>{`${this.props.stats[1][0]} ${this.props.stats[1][1]}`}</li>
+            <li>{`${this.props.stats[2][0]} ${this.props.stats[2][1]}`}</li>
+            <li>{`${this.props.stats[3][0]} ${this.props.stats[3][1]}`}</li>
+            <li>{`${this.props.stats[4][0]} ${this.props.stats[4][1]}`}</li>
+            <li>{`${this.props.stats[5][0]} ${this.props.stats[5][1]}`}</li>
+          </ul>
+        <br></br><br></br><br></br><br></br>
+
+        <Button
           onClick={e => {
             this.props.formComplete(e);
           }}
         >
           Take the test again!
-        </button>
+        </Button>
       </div>
     );
   }

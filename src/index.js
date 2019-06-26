@@ -112,6 +112,7 @@ class App extends React.Component {
         yourPokemon: <Pokemon 
           pokemon={this.state.yourPokemon} 
           formComplete={this.handlePokemonButtonClick}
+          stats={this.state.stats}
         />
       });
     })
