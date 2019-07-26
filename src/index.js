@@ -154,7 +154,7 @@ class App extends React.Component {
         {this.state.showPage1 ? this.state.page1 : null}
         {this.state.showPage2 ? this.state.page2 : null}
         {this.state.showPage3 ? this.state.page3 : null}
-        {this.state.showPokemon ? this.state.yourPokemon : null}
+        {this.state.showPokemon ? this.state.yourPokemon : null}        
       </div>
     );
   }
