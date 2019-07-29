@@ -6,7 +6,9 @@ import Page2 from "./components/page2.js";
 import Page3 from "./components/page3.js";
 import Pokemon from "./components/pokemon.js";
 import Promise from 'bluebird';
+import extraPokeInfo from "../database/pokemon.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 // import {Pagination} from 'react-bootstrap'
 
 class App extends React.Component {
@@ -31,6 +33,7 @@ class App extends React.Component {
     this.pokemonSelector = this.pokemonSelector.bind(this);
     this.handlePokemonButtonClick = this.handlePokemonButtonClick.bind(this)
     this.getStats=this.getStats.bind(this)
+    this.addTypesAndPicture=this.addTypesAndPicture.bind(this)
   }
 
   componentDidMount() {
@@ -53,14 +56,25 @@ class App extends React.Component {
         .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
         .then(({ data }) => {
           pokemon[data.id] = data;
-          // console.log('logging data', data.name)
+          // console.log('logging data', data)
           this.setState({
             pokemon: pokemon
           });
         })
+        .then(() => {
+          this.addTypesAndPicture()
+        })
         .catch(err => {
           console.log("err in getting poke data client side", err);
         });
+    }
+  }
+
+  addTypesAndPicture() {
+    let obj = this.state.pokemon
+    for(let key in obj) {
+     obj[key].sprites = extraPokeInfo[key].imageUrl
+     obj[key].types = extraPokeInfo[key].types
     }
   }
 

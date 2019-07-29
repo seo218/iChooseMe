@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Badge } from "react-bootstrap";
+import { Form, Button, Badge, ButtonToolbar } from "react-bootstrap";
 
 class Page1 extends React.Component {
   constructor(props) {
@@ -8,38 +8,29 @@ class Page1 extends React.Component {
 
   render() {
     return (
-      <Form>
+      <Form className="form">
         <h1>
-        Welcome to iChooseMe - 
+        
           <Badge variant="danger">
-            what Pokemon are you??
+          Welcome to iChooseMe - what Pokemon are you??
           </Badge>
         
         </h1>
-        <h2>Select all that apply</h2>
-        <Form.Check type="checkbox" label="I am a mellenial" />
+        <h2>Today, I want to know... </h2>
+        <h4>(select all that apply)</h4>
+        <Form.Check type="checkbox" label="My pokemon type (personality tendencies)" />
         <br />
-        <Form.Check type="checkbox" label="I write computer software" />
+        <Form.Check type="checkbox" label="My stats (overall emotional heath)" />
         <br />
-        <Form.Check type="checkbox" label="I play video games" />
+        <Form.Check type="checkbox" label="How to get rare candies (how to care for my emotional health on a regular basis)" />
         <br />
-        <Form.Check type="checkbox" label="I live in NYC" />
+        <Form.Check type="checkbox" label="How to evolve/learn new moves (long term goals for my emotional health)" />
         <br />
-        <Form.Check
-          type="checkbox"
-          label="I wonder where the compost in front of Bevi went"
-        />
-        <br />
-        <Form.Check type="checkbox" label="I made a great MVP project" />
-        <br />
-        <Button
-          variant="danger"
-          onClick={e => {
-            this.props.formComplete(e);
-          }}
-        >
+      
+        <Button onClick={e => {this.props.formComplete(e)}} >
           done
         </Button>
+    
       </Form>
     );
   }

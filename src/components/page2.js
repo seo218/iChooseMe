@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Badge, Buttton} from "react-bootstrap";
+import { Form, Button, Badge} from "react-bootstrap";
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -35,9 +35,9 @@ class Page2 extends React.Component {
           <br></br>
           <Form.Check type="checkbox" label="James" />
           <br></br>
-          <button onClick={(e)=>{this.props.formComplete(e)}}>
+          <Button onClick={(e)=>{this.props.formComplete(e)}}>
             done
-          </button>
+          </Button>
 
       </Form>
     );
