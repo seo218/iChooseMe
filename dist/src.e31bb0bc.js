@@ -26724,7 +26724,7 @@ module.exports = function xhrAdapter(config) {
   });
 };
 
-},{"./../utils":"../node_modules/axios/lib/utils.js","./../core/settle":"../node_modules/axios/lib/core/settle.js","./../helpers/buildURL":"../node_modules/axios/lib/helpers/buildURL.js","./../helpers/parseHeaders":"../node_modules/axios/lib/helpers/parseHeaders.js","./../helpers/isURLSameOrigin":"../node_modules/axios/lib/helpers/isURLSameOrigin.js","../core/createError":"../node_modules/axios/lib/core/createError.js","./../helpers/cookies":"../node_modules/axios/lib/helpers/cookies.js"}],"../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+},{"./../utils":"../node_modules/axios/lib/utils.js","./../core/settle":"../node_modules/axios/lib/core/settle.js","./../helpers/buildURL":"../node_modules/axios/lib/helpers/buildURL.js","./../helpers/parseHeaders":"../node_modules/axios/lib/helpers/parseHeaders.js","./../helpers/isURLSameOrigin":"../node_modules/axios/lib/helpers/isURLSameOrigin.js","../core/createError":"../node_modules/axios/lib/core/createError.js","./../helpers/cookies":"../node_modules/axios/lib/helpers/cookies.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -27034,7 +27034,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-},{"./utils":"../node_modules/axios/lib/utils.js","./helpers/normalizeHeaderName":"../node_modules/axios/lib/helpers/normalizeHeaderName.js","./adapters/http":"../node_modules/axios/lib/adapters/xhr.js","./adapters/xhr":"../node_modules/axios/lib/adapters/xhr.js","process":"../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../node_modules/axios/lib/helpers/isAbsoluteURL.js":[function(require,module,exports) {
+},{"./utils":"../node_modules/axios/lib/utils.js","./helpers/normalizeHeaderName":"../node_modules/axios/lib/helpers/normalizeHeaderName.js","./adapters/http":"../node_modules/axios/lib/adapters/xhr.js","./adapters/xhr":"../node_modules/axios/lib/adapters/xhr.js","process":"../../../../../../usr/local/lib/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../node_modules/axios/lib/helpers/isAbsoluteURL.js":[function(require,module,exports) {
 'use strict';
 
 /**
@@ -44264,9 +44264,9 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, "Welcome to iChooseMe -", _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
-      }, "Welcome to iChooseMe - what Pokemon are you??")), _react.default.createElement("h2", null, "Select all that apply"), _react.default.createElement(_reactBootstrap.Form.Check, {
+      }, "what Pokemon are you??")), _react.default.createElement("h2", null, "Select all that apply"), _react.default.createElement(_reactBootstrap.Form.Check, {
         type: "checkbox",
         label: "I am a mellenial"
       }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
@@ -44284,7 +44284,8 @@ function (_React$Component) {
       }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
         type: "checkbox",
         label: "I made a great MVP project"
-      }), _react.default.createElement("br", null), _react.default.createElement("button", {
+      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "danger",
         onClick: function onClick(e) {
           _this.props.formComplete(e);
         }
@@ -50218,7 +50219,7 @@ module.exports = ret;
 
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
-},{"process":"../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"index.js":[function(require,module,exports) {
+},{"process":"../../../../../../usr/local/lib/node_modules/parcel-bundler/node_modules/process/browser.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -50439,7 +50440,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), document.getElementById("iChooseMe"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js"}],"../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -50467,7 +50468,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63943" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56059" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -50642,5 +50643,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/src.e31bb0bc.js.map
