@@ -5,7 +5,8 @@ import Page1 from "./components/page1.js";
 import Page2 from "./components/page2.js";
 import Page3 from "./components/page3.js";
 import Pokemon from "./components/pokemon.js";
-import Promise from 'bluebird'
+import Promise from 'bluebird';
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import {Pagination} from 'react-bootstrap'
 
 class App extends React.Component {
