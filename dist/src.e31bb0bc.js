@@ -44529,7 +44529,7 @@ function (_React$Component) {
       var pokemonStr = '';
 
       for (var i = 0; i < this.props.pokemon.types.length; i++) {
-        pokemonStr += this.props.pokemon.types[i];
+        pokemonStr += "".concat(this.props.pokemon.types[i], " ");
       }
 
       return pokemonStr;

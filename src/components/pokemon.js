@@ -23,7 +23,7 @@ class Pokemon extends React.Component {
   pokemonTypesArrToSpacedText () {
     let pokemonStr = ''
     for(let i = 0; i < this.props.pokemon.types.length; i ++) {
-      pokemonStr += this.props.pokemon.types[i]
+      pokemonStr += `${this.props.pokemon.types[i]} `
     }
     return pokemonStr
   }
