@@ -118,7 +118,7 @@ class Pokemon extends React.Component {
         <div>
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row> 
-              <Col sm="3" >
+              <Col sm="2" >
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item onClick={e => {this.handleTabClick(this.state.stats)}}>
                     <Nav.Link eventKey="first">Your Pokemon</Nav.Link>

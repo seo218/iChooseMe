@@ -1,19 +1,18 @@
+.iChooseMe {
+  padding: 2%;
+  text-align: center;
+  background-color: black;
+  color: white;
+};
+
 body {
-    padding: 100px;
-    text-align: center;
-  }
+  background-color: black
+};
 
-  .iChooseMe {
-      padding: 50px;
-      width: 80%
-  }
+html {
+  background-color: black
+};
 
-  .form {
-      padding: 50px;
-      margin: 10%;
-      color: aquamarine;
-      background-color: black
 
-  }
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

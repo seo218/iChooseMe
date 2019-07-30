@@ -8,7 +8,7 @@ class Page1 extends React.Component {
 
   render() {
     return (
-      <Form className="form">
+      <Form>
         <h1>
         
           <Badge variant="danger">
@@ -16,7 +16,7 @@ class Page1 extends React.Component {
           </Badge>
         
         </h1>
-        <h2>Today, I want to know... </h2>
+        <h2 font-color="white">Today, I want to know... </h2>
         <h4>(select all that apply)</h4>
         <Form.Check type="checkbox" label="My pokemon type (personality tendencies)" />
         <br />

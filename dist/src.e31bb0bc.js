@@ -44264,11 +44264,11 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, {
-        className: "form"
-      }, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
-      }, "Welcome to iChooseMe - what Pokemon are you??")), _react.default.createElement("h2", null, "Today, I want to know... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement(_reactBootstrap.Form.Check, {
+      }, "Welcome to iChooseMe - what Pokemon are you??")), _react.default.createElement("h2", {
+        "font-color": "white"
+      }, "Today, I want to know... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement(_reactBootstrap.Form.Check, {
         type: "checkbox",
         label: "My pokemon type (personality tendencies)"
       }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
@@ -129815,7 +129815,7 @@ function (_React$Component) {
         id: "left-tabs-example",
         defaultActiveKey: "first"
       }, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
-        sm: "3"
+        sm: "2"
       }, _react.default.createElement(_reactBootstrap.Nav, {
         variant: "pills",
         className: "flex-column"
