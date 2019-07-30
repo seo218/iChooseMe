@@ -19,8 +19,7 @@ class Page2 extends React.Component {
     return (
       <Form>
         <h1>
-          <br />
-          <br />
+        <br />
           <Badge variant="danger">
             I would trade trade my bicycle for 100 masterballs
           </Badge>

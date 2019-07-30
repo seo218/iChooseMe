@@ -20,7 +20,6 @@ class Page3 extends React.Component {
       <Form>
         <h1>
           <br />
-          <br />
           <Badge variant="danger">I would go through Rock Tunnel without Flash</Badge>
           <br />
           <br />

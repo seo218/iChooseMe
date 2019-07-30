@@ -20,7 +20,6 @@ class Page5 extends React.Component {
       <Form>
         <h1>
           <br />
-          <br />
           <Badge variant="danger">
             I would trade my Blue and Red Version for Yellow Version
           </Badge>

@@ -20,7 +20,6 @@ class Page4 extends React.Component {
       <Form>
         <h1>
           <br />
-          <br />
           <Badge variant="danger">I would train my Charizard to both Fly and Dig</Badge>
           <br />
           <br />
