@@ -44517,7 +44517,7 @@ function (_React$Component) {
   //   let src = obj.front_default
   //   if(obj.front_default === null) src = obj.front_shiny
   //   if(src !== null) return src
-  //   if(obj.front_shiny === null) src = obj.front_female 
+  //   if(obj.front_shiny === null) src = obj.front_female
   //   if(src !== null) return src
   //   if(obj.front_shiny_female === null) return src
   // }
@@ -44526,7 +44526,7 @@ function (_React$Component) {
   _createClass(Pokemon, [{
     key: "pokemonTypesArrToSpacedText",
     value: function pokemonTypesArrToSpacedText() {
-      var pokemonStr = '';
+      var pokemonStr = "";
 
       for (var i = 0; i < this.props.pokemon.types.length; i++) {
         pokemonStr += "".concat(this.props.pokemon.types[i], " ");
@@ -44539,9 +44539,18 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement("div", null, "Congratulations, you are a ", this.props.pokemon.name, "!", _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("img", {
+      return _react.default.createElement("div", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("p", null, "Congratulations, you are a ", this.props.pokemon.name, "!", _react.default.createElement("br", null)), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Figure, {
+        className: "pokemon"
+      }, _react.default.createElement(_reactBootstrap.Figure.Image, {
+        width: 171,
+        height: 180,
+        alt: "171x180",
         src: this.props.pokemon.sprites
-      }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("ul", null, _react.default.createElement("li", null, "Stats"), _react.default.createElement("li", null, this.pokemonTypesArrToSpacedText()), _react.default.createElement("li", null, "".concat(this.props.stats[0][0], " ").concat(this.props.stats[0][1])), _react.default.createElement("li", null, "".concat(this.props.stats[1][0], " ").concat(this.props.stats[1][1])), _react.default.createElement("li", null, "".concat(this.props.stats[2][0], " ").concat(this.props.stats[2][1])), _react.default.createElement("li", null, "".concat(this.props.stats[3][0], " ").concat(this.props.stats[3][1])), _react.default.createElement("li", null, "".concat(this.props.stats[4][0], " ").concat(this.props.stats[4][1])), _react.default.createElement("li", null, "".concat(this.props.stats[5][0], " ").concat(this.props.stats[5][1]))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+      }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Figure.Caption, null, _react.default.createElement(_reactBootstrap.Table, {
+        striped: true,
+        bordered: true,
+        hover: true
+      }, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Type(s)"), _react.default.createElement("th", null, this.props.stats[0][0]), _react.default.createElement("th", null, this.props.stats[1][0]), _react.default.createElement("th", null, this.props.stats[2][0]), _react.default.createElement("th", null, this.props.stats[3][0]), _react.default.createElement("th", null, this.props.stats[4][0]), _react.default.createElement("th", null, this.props.stats[5][0]))), _react.default.createElement("tbody", null, _react.default.createElement("tr", null, _react.default.createElement("td", null, this.pokemonTypesArrToSpacedText()), _react.default.createElement("td", null, this.props.stats[0][1]), _react.default.createElement("td", null, this.props.stats[1][1]), _react.default.createElement("td", null, this.props.stats[2][1]), _react.default.createElement("td", null, this.props.stats[3][1]), _react.default.createElement("td", null, this.props.stats[4][1]), _react.default.createElement("td", null, this.props.stats[5][1])))))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick(e) {
           _this2.props.formComplete(e);
         }
