@@ -1,44 +1,89 @@
 import React from "react";
-import { Form, Button, Badge} from "react-bootstrap";
+import { Form, Button, Badge, Dropdown } from "react-bootstrap";
 
 class Page2 extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      dropdownMenu: "Select One"
+    };
+    this.handleDropdownMenuChange = this.handleDropdownMenuChange.bind(this);
   }
 
+  handleDropdownMenuChange(e) {
+    this.setState({
+      dropdownMenu: e
+    });
+  }
   render() {
     return (
       <Form>
         <h1>
-          <Badge variant='danger'>     
-          I'm more of a(n)...
+          <br />
+          <br />
+          <Badge variant="danger">
+            I would trade trade my bicycle for 100 masterballs
           </Badge>
+          <br />
+          <br />
         </h1>
-        <h2>
-          Select all that apply    
-        </h2>        
-          <Form.Check type="checkbox" label="Ash" />
-          <br></br>
-          <Form.Check type="checkbox" label="Misty" />
-          <br></br>
-          <Form.Check type="checkbox" label="Brock" />
-          <br></br>
-          <Form.Check type="checkbox" label="Nurse Joy" />
-          <br></br>
-          <Form.Check type="checkbox" label="Officer Jenny" />
-          <br></br>
-          <Form.Check type="checkbox" label="Gary" />
-          <br></br>
-          <Form.Check type="checkbox" label="Professor Oak" />
-          <br></br>
-          <Form.Check type="checkbox" label="Jesse" />
-          <br></br>
-          <Form.Check type="checkbox" label="James" />
-          <br></br>
-          <Button onClick={(e)=>{this.props.formComplete(e)}}>
-            done
-          </Button>
-
+        <h2 />
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            {this.state.dropdownMenu}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item
+              href="#/action-1"
+              onClick={() => {
+                this.handleDropdownMenuChange("Strongly agree");
+              }}
+            >
+              Strongly agree
+            </Dropdown.Item>
+            <Dropdown.Item
+              href="#/action-2"
+              onClick={() => {
+                this.handleDropdownMenuChange("Agree");
+              }}
+            >
+              Agree
+            </Dropdown.Item>
+            <Dropdown.Item
+              href="#/action-3"
+              onClick={() => {
+                this.handleDropdownMenuChange("Neither agree or disagree");
+              }}
+            >
+              Neither agree or disagree
+            </Dropdown.Item>
+            <Dropdown.Item
+              href="#/action-4"
+              onClick={() => {
+                this.handleDropdownMenuChange("Disagree");
+              }}
+            >
+              Disagree
+            </Dropdown.Item>
+            <Dropdown.Item
+              href="#/action-5"
+              onClick={() => {
+                this.handleDropdownMenuChange("Strongly disagree");
+              }}
+            >
+              Strongly disagree
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <br />
+        <br />
+        <Button
+          onClick={e => {
+            this.props.formComplete(e);
+          }}
+        >
+          next
+        </Button>
       </Form>
     );
   }

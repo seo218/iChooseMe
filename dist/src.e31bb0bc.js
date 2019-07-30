@@ -44317,9 +44317,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -44331,50 +44331,65 @@ function (_React$Component) {
   _inherits(Page2, _React$Component);
 
   function Page2(props) {
+    var _this;
+
     _classCallCheck(this, Page2);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Page2).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page2).call(this, props));
+    _this.state = {
+      dropdownMenu: "Select One"
+    };
+    _this.handleDropdownMenuChange = _this.handleDropdownMenuChange.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Page2, [{
+    key: "handleDropdownMenuChange",
+    value: function handleDropdownMenuChange(e) {
+      this.setState({
+        dropdownMenu: e
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
-      }, "I'm more of a(n)...")), _react.default.createElement("h2", null, "Select all that apply"), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Ash"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Misty"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Brock"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Nurse Joy"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Officer Jenny"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Gary"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Professor Oak"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Jesse"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "James"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
-        onClick: function onClick(e) {
-          _this.props.formComplete(e);
+      }, "I would trade trade my bicycle for 100 masterballs"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("h2", null), _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
+        variant: "success",
+        id: "dropdown-basic"
+      }, this.state.dropdownMenu), _react.default.createElement(_reactBootstrap.Dropdown.Menu, null, _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-1",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly agree");
         }
-      }, "done"));
+      }, "Strongly agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-2",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Agree");
+        }
+      }, "Agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-3",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Neither agree or disagree");
+        }
+      }, "Neither agree or disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-4",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Disagree");
+        }
+      }, "Disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-5",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly disagree");
+        }
+      }, "Strongly disagree"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+        onClick: function onClick(e) {
+          _this2.props.formComplete(e);
+        }
+      }, "next"));
     }
   }]);
 
@@ -44407,9 +44422,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -44421,41 +44436,65 @@ function (_React$Component) {
   _inherits(Page3, _React$Component);
 
   function Page3(props) {
+    var _this;
+
     _classCallCheck(this, Page3);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Page3).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page3).call(this, props));
+    _this.state = {
+      dropdownMenu: "Select One"
+    };
+    _this.handleDropdownMenuChange = _this.handleDropdownMenuChange.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Page3, [{
+    key: "handleDropdownMenuChange",
+    value: function handleDropdownMenuChange(e) {
+      this.setState({
+        dropdownMenu: e
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
-      }, "If I had to I would...")), _react.default.createElement("h2", null, "Select all that apply"), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Sell my bike so I can buy pokeballs"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Train my Charizard to both fly and dig"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Go through Rock Tunnel without Flash"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Trade my Blue and Red version for Yellow version"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Call a hotdog a sandwhich"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "Eat smore's poptarts instead of strawberry ones, just kidding - there isn't a hypothetical where this is possible"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
-        onClick: function onClick(e) {
-          _this.props.formComplete(e);
+      }, "I would go through Rock Tunnel without Flash"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("h2", null), _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
+        variant: "success",
+        id: "dropdown-basic"
+      }, this.state.dropdownMenu), _react.default.createElement(_reactBootstrap.Dropdown.Menu, null, _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-1",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly agree");
         }
-      }, "done"));
+      }, "Strongly agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-2",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Agree");
+        }
+      }, "Agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-3",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Neither agree or disagree");
+        }
+      }, "Neither agree or disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-4",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Disagree");
+        }
+      }, "Disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-5",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly disagree");
+        }
+      }, "Strongly disagree"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+        onClick: function onClick(e) {
+          _this2.props.formComplete(e);
+        }
+      }, "next"));
     }
   }]);
 
@@ -44463,6 +44502,216 @@ function (_React$Component) {
 }(_react.default.Component);
 
 var _default = Page3;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/page4.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Page4 =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Page4, _React$Component);
+
+  function Page4(props) {
+    var _this;
+
+    _classCallCheck(this, Page4);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page4).call(this, props));
+    _this.state = {
+      dropdownMenu: "Select One"
+    };
+    _this.handleDropdownMenuChange = _this.handleDropdownMenuChange.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Page4, [{
+    key: "handleDropdownMenuChange",
+    value: function handleDropdownMenuChange(e) {
+      this.setState({
+        dropdownMenu: e
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Badge, {
+        variant: "danger"
+      }, "I would train my Charizard to both Fly and Dig"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("h2", null), _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
+        variant: "success",
+        id: "dropdown-basic"
+      }, this.state.dropdownMenu), _react.default.createElement(_reactBootstrap.Dropdown.Menu, null, _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-1",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly agree");
+        }
+      }, "Strongly agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-2",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Agree");
+        }
+      }, "Agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-3",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Neither agree or disagree");
+        }
+      }, "Neither agree or disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-4",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Disagree");
+        }
+      }, "Disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-5",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly disagree");
+        }
+      }, "Strongly disagree"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+        onClick: function onClick(e) {
+          _this2.props.formComplete(e);
+        }
+      }, "next"));
+    }
+  }]);
+
+  return Page4;
+}(_react.default.Component);
+
+var _default = Page4;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/page5.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Page5 =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Page5, _React$Component);
+
+  function Page5(props) {
+    var _this;
+
+    _classCallCheck(this, Page5);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page5).call(this, props));
+    _this.state = {
+      dropdownMenu: "Select One"
+    };
+    _this.handleDropdownMenuChange = _this.handleDropdownMenuChange.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Page5, [{
+    key: "handleDropdownMenuChange",
+    value: function handleDropdownMenuChange(e) {
+      this.setState({
+        dropdownMenu: e
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Badge, {
+        variant: "danger"
+      }, "I would trade my Blue and Red Version for Yellow Version"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("h2", null), _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
+        variant: "success",
+        id: "dropdown-basic"
+      }, this.state.dropdownMenu), _react.default.createElement(_reactBootstrap.Dropdown.Menu, null, _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-1",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly agree");
+        }
+      }, "Strongly agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-2",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Agree");
+        }
+      }, "Agree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-3",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Neither agree or disagree");
+        }
+      }, "Neither agree or disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-4",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Disagree");
+        }
+      }, "Disagree"), _react.default.createElement(_reactBootstrap.Dropdown.Item, {
+        href: "#/action-5",
+        onClick: function onClick() {
+          _this2.handleDropdownMenuChange("Strongly disagree");
+        }
+      }, "Strongly disagree"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+        onClick: function onClick(e) {
+          _this2.props.formComplete(e);
+        }
+      }, "next"));
+    }
+  }]);
+
+  return Page5;
+}(_react.default.Component);
+
+var _default = Page5;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/pokemon.js":[function(require,module,exports) {
 "use strict";
@@ -51078,6 +51327,10 @@ var _page2 = _interopRequireDefault(require("./components/page2.js"));
 
 var _page3 = _interopRequireDefault(require("./components/page3.js"));
 
+var _page4 = _interopRequireDefault(require("./components/page4.js"));
+
+var _page5 = _interopRequireDefault(require("./components/page5.js"));
+
 var _pokemon = _interopRequireDefault(require("./components/pokemon.js"));
 
 var _bluebird = _interopRequireDefault(require("bluebird"));
@@ -51106,7 +51359,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-// import {Pagination} from 'react-bootstrap'
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -51126,6 +51378,10 @@ function (_React$Component) {
       page2: null,
       showPage3: false,
       page3: null,
+      showPage4: false,
+      page4: null,
+      showPage5: false,
+      page5: null,
       showPokemon: false,
       yourPokemon: {
         id: 1
@@ -51136,6 +51392,8 @@ function (_React$Component) {
     _this.handlePage1Click = _this.handlePage1Click.bind(_assertThisInitialized(_this));
     _this.handlePage2Click = _this.handlePage2Click.bind(_assertThisInitialized(_this));
     _this.handlePage3Click = _this.handlePage3Click.bind(_assertThisInitialized(_this));
+    _this.handlePage4Click = _this.handlePage4Click.bind(_assertThisInitialized(_this));
+    _this.handlePage5Click = _this.handlePage5Click.bind(_assertThisInitialized(_this));
     _this.pokemonSelector = _this.pokemonSelector.bind(_assertThisInitialized(_this));
     _this.handlePokemonButtonClick = _this.handlePokemonButtonClick.bind(_assertThisInitialized(_this));
     _this.getStats = _this.getStats.bind(_assertThisInitialized(_this));
@@ -51162,6 +51420,16 @@ function (_React$Component) {
           formComplete: this.handlePage3Click
         })
       });
+      this.setState({
+        page4: _react.default.createElement(_page4.default, {
+          formComplete: this.handlePage4Click
+        })
+      });
+      this.setState({
+        page5: _react.default.createElement(_page5.default, {
+          formComplete: this.handlePage5Click
+        })
+      });
     }
   }, {
     key: "getPokeData",
@@ -51173,7 +51441,7 @@ function (_React$Component) {
       for (var i = 1; i < 152; i++) {
         _axios.default.get("https://pokeapi.co/api/v2/pokemon/".concat(i)).then(function (_ref) {
           var data = _ref.data;
-          pokemon[data.id - 1] = data; // console.log('logging data', data)
+          pokemon[data.id - 1] = data;
 
           _this2.setState({
             pokemon: pokemon
@@ -51188,8 +51456,7 @@ function (_React$Component) {
   }, {
     key: "addTypesAndPicture",
     value: function addTypesAndPicture() {
-      var obj = this.state.pokemon; // console.log('printing obj key', obj[1])
-      // console.log('printing extrapokeinfo key ', extraPokeInfo[0]) 
+      var obj = this.state.pokemon;
 
       for (var key in obj) {
         obj[key].sprites = _pokemon2.default[key].imageUrl;
@@ -51224,6 +51491,28 @@ function (_React$Component) {
       e.preventDefault();
       this.setState({
         showPage3: !this.state.showPage3
+      });
+      this.setState({
+        showPage4: !this.state.showPage4
+      });
+    }
+  }, {
+    key: "handlePage4Click",
+    value: function handlePage4Click(e) {
+      e.preventDefault();
+      this.setState({
+        showPage4: !this.state.showPage4
+      });
+      this.setState({
+        showPage5: !this.state.showPage5
+      });
+    }
+  }, {
+    key: "handlePage5Click",
+    value: function handlePage5Click(e) {
+      e.preventDefault();
+      this.setState({
+        showPage5: !this.state.showPage5
       });
       this.pokemonSelector();
     }
@@ -51294,7 +51583,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "iChooseMe"
-      }, this.state.showPage1 ? this.state.page1 : null, this.state.showPage2 ? this.state.page2 : null, this.state.showPage3 ? this.state.page3 : null, this.state.showPokemon ? this.state.yourPokemon : null);
+      }, this.state.showPage1 ? this.state.page1 : null, this.state.showPage2 ? this.state.page2 : null, this.state.showPage3 ? this.state.page3 : null, this.state.showPage4 ? this.state.page4 : null, this.state.showPage5 ? this.state.page5 : null, this.state.showPokemon ? this.state.yourPokemon : null);
     }
   }]);
 
@@ -51302,7 +51591,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), document.getElementById("iChooseMe"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js","../database/pokemon.js":"../database/pokemon.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/page4.js":"components/page4.js","./components/page5.js":"components/page5.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js","../database/pokemon.js":"../database/pokemon.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

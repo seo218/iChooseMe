@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Badge, Dropdown } from "react-bootstrap";
 
-class Page3 extends React.Component {
+class Page4 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +21,7 @@ class Page3 extends React.Component {
         <h1>
           <br />
           <br />
-          <Badge variant="danger">I would go through Rock Tunnel without Flash</Badge>
+          <Badge variant="danger">I would train my Charizard to both Fly and Dig</Badge>
           <br />
           <br />
         </h1>
@@ -87,4 +87,4 @@ class Page3 extends React.Component {
   }
 }
 
-export default Page3;
+export default Page4;

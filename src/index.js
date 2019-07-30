@@ -4,12 +4,12 @@ import axios from "axios";
 import Page1 from "./components/page1.js";
 import Page2 from "./components/page2.js";
 import Page3 from "./components/page3.js";
+import Page4 from "./components/page4.js";
+import Page5 from "./components/page5.js";
 import Pokemon from "./components/pokemon.js";
 import Promise from 'bluebird';
 import extraPokeInfo from "../database/pokemon.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-// import {Pagination} from 'react-bootstrap'
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +22,10 @@ class App extends React.Component {
       page2: null,
       showPage3: false,
       page3: null,
+      showPage4: false,
+      page4: null,
+      showPage5: false,
+      page5: null, 
       showPokemon: false,
       yourPokemon: {id:1},
       stats: []
@@ -30,6 +34,8 @@ class App extends React.Component {
     this.handlePage1Click = this.handlePage1Click.bind(this);
     this.handlePage2Click = this.handlePage2Click.bind(this);
     this.handlePage3Click = this.handlePage3Click.bind(this);
+    this.handlePage4Click = this.handlePage4Click.bind(this);
+    this.handlePage5Click = this.handlePage5Click.bind(this);
     this.pokemonSelector = this.pokemonSelector.bind(this);
     this.handlePokemonButtonClick = this.handlePokemonButtonClick.bind(this)
     this.getStats=this.getStats.bind(this)
@@ -47,6 +53,12 @@ class App extends React.Component {
     this.setState({
       page3: <Page3 formComplete={this.handlePage3Click} />
     });
+    this.setState({
+      page4: <Page4 formComplete={this.handlePage4Click} />
+    });
+    this.setState({
+      page5: <Page5 formComplete={this.handlePage5Click} />
+    });
   }
 
   getPokeData() {
@@ -56,7 +68,6 @@ class App extends React.Component {
         .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
         .then(({ data }) => {
           pokemon[data.id - 1] = data;
-          // console.log('logging data', data)
           this.setState({
             pokemon: pokemon
           });
@@ -72,8 +83,6 @@ class App extends React.Component {
 
   addTypesAndPicture() {
     let obj = this.state.pokemon
-    // console.log('printing obj key', obj[1])
-    // console.log('printing extrapokeinfo key ', extraPokeInfo[0]) 
     for(let key in obj) {
       obj[key].sprites = extraPokeInfo[key].imageUrl
       obj[key].types = extraPokeInfo[key].types
@@ -104,6 +113,25 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({
       showPage3: !this.state.showPage3
+    });
+    this.setState({
+      showPage4: !this.state.showPage4
+    });
+  }
+
+  handlePage4Click(e) {
+    e.preventDefault();
+    this.setState({
+      showPage4: !this.state.showPage4
+    });
+    this.setState({
+      showPage5: !this.state.showPage5
+    });
+  }
+  handlePage5Click(e) {
+    e.preventDefault();
+    this.setState({
+      showPage5: !this.state.showPage5
     });
     this.pokemonSelector();
    
@@ -171,6 +199,8 @@ class App extends React.Component {
         {this.state.showPage1 ? this.state.page1 : null}
         {this.state.showPage2 ? this.state.page2 : null}
         {this.state.showPage3 ? this.state.page3 : null}
+        {this.state.showPage4 ? this.state.page4 : null}
+        {this.state.showPage5 ? this.state.page5 : null}
         {this.state.showPokemon ? this.state.yourPokemon : null}        
       </div>
     );
