@@ -44488,9 +44488,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -44511,6 +44511,7 @@ function (_React$Component) {
       stats: []
     }; // this.getPokemonImage=this.getPokemonImage.bind(this)
 
+    _this.pokemonTypesArrToSpacedText = _this.pokemonTypesArrToSpacedText.bind(_assertThisInitialized(_this));
     return _this;
   } // getPokemonImage (obj) {
   //   let src = obj.front_default
@@ -44523,13 +44524,24 @@ function (_React$Component) {
 
 
   _createClass(Pokemon, [{
+    key: "pokemonTypesArrToSpacedText",
+    value: function pokemonTypesArrToSpacedText() {
+      var pokemonStr = '';
+
+      for (var i = 0; i < this.props.pokemon.types.length; i++) {
+        pokemonStr += this.props.pokemon.types[i];
+      }
+
+      return pokemonStr;
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       return _react.default.createElement("div", null, "Congratulations, you are a ", this.props.pokemon.name, "!", _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("img", {
         src: this.props.pokemon.sprites
-      }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("ul", null, _react.default.createElement("li", null, "Stats"), _react.default.createElement("li", null, "".concat(this.props.stats[0][0], " ").concat(this.props.stats[0][1])), _react.default.createElement("li", null, "".concat(this.props.stats[1][0], " ").concat(this.props.stats[1][1])), _react.default.createElement("li", null, "".concat(this.props.stats[2][0], " ").concat(this.props.stats[2][1])), _react.default.createElement("li", null, "".concat(this.props.stats[3][0], " ").concat(this.props.stats[3][1])), _react.default.createElement("li", null, "".concat(this.props.stats[4][0], " ").concat(this.props.stats[4][1])), _react.default.createElement("li", null, "".concat(this.props.stats[5][0], " ").concat(this.props.stats[5][1]))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+      }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("ul", null, _react.default.createElement("li", null, "Stats"), _react.default.createElement("li", null, this.pokemonTypesArrToSpacedText()), _react.default.createElement("li", null, "".concat(this.props.stats[0][0], " ").concat(this.props.stats[0][1])), _react.default.createElement("li", null, "".concat(this.props.stats[1][0], " ").concat(this.props.stats[1][1])), _react.default.createElement("li", null, "".concat(this.props.stats[2][0], " ").concat(this.props.stats[2][1])), _react.default.createElement("li", null, "".concat(this.props.stats[3][0], " ").concat(this.props.stats[3][1])), _react.default.createElement("li", null, "".concat(this.props.stats[4][0], " ").concat(this.props.stats[4][1])), _react.default.createElement("li", null, "".concat(this.props.stats[5][0], " ").concat(this.props.stats[5][1]))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick(e) {
           _this2.props.formComplete(e);
         }
@@ -51152,7 +51164,7 @@ function (_React$Component) {
       for (var i = 1; i < 152; i++) {
         _axios.default.get("https://pokeapi.co/api/v2/pokemon/".concat(i)).then(function (_ref) {
           var data = _ref.data;
-          pokemon[data.id] = data; // console.log('logging data', data)
+          pokemon[data.id - 1] = data; // console.log('logging data', data)
 
           _this2.setState({
             pokemon: pokemon
@@ -51167,7 +51179,8 @@ function (_React$Component) {
   }, {
     key: "addTypesAndPicture",
     value: function addTypesAndPicture() {
-      var obj = this.state.pokemon;
+      var obj = this.state.pokemon; // console.log('printing obj key', obj[1])
+      // console.log('printing extrapokeinfo key ', extraPokeInfo[0]) 
 
       for (var key in obj) {
         obj[key].sprites = _pokemon2.default[key].imageUrl;
@@ -51308,7 +51321,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60440" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50636" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

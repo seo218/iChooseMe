@@ -55,7 +55,7 @@ class App extends React.Component {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
         .then(({ data }) => {
-          pokemon[data.id] = data;
+          pokemon[data.id - 1] = data;
           // console.log('logging data', data)
           this.setState({
             pokemon: pokemon
@@ -72,9 +72,11 @@ class App extends React.Component {
 
   addTypesAndPicture() {
     let obj = this.state.pokemon
+    // console.log('printing obj key', obj[1])
+    // console.log('printing extrapokeinfo key ', extraPokeInfo[0]) 
     for(let key in obj) {
-     obj[key].sprites = extraPokeInfo[key].imageUrl
-     obj[key].types = extraPokeInfo[key].types
+      obj[key].sprites = extraPokeInfo[key].imageUrl
+      obj[key].types = extraPokeInfo[key].types
     }
   }
 

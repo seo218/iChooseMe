@@ -8,6 +8,7 @@ class Pokemon extends React.Component {
         stats: []
     };
     // this.getPokemonImage=this.getPokemonImage.bind(this)
+    this.pokemonTypesArrToSpacedText=this.pokemonTypesArrToSpacedText.bind(this)
   }
 
   // getPokemonImage (obj) {
@@ -19,6 +20,13 @@ class Pokemon extends React.Component {
   //   if(obj.front_shiny_female === null) return src
   // }
 
+  pokemonTypesArrToSpacedText () {
+    let pokemonStr = ''
+    for(let i = 0; i < this.props.pokemon.types.length; i ++) {
+      pokemonStr += this.props.pokemon.types[i]
+    }
+    return pokemonStr
+  }
 
   render() {
     return (
@@ -31,6 +39,7 @@ class Pokemon extends React.Component {
         <br></br><br></br><br></br><br></br>
           <ul>
             <li>Stats</li>
+            <li>{this.pokemonTypesArrToSpacedText()}</li>
             <li>{`${this.props.stats[0][0]} ${this.props.stats[0][1]}`}</li>
             <li>{`${this.props.stats[1][0]} ${this.props.stats[1][1]}`}</li>
             <li>{`${this.props.stats[2][0]} ${this.props.stats[2][1]}`}</li>
