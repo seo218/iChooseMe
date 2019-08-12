@@ -44216,7 +44216,13 @@ var _ToastBody2 = _interopRequireDefault(require("./ToastBody"));
 var _ToastHeader2 = _interopRequireDefault(require("./ToastHeader"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Accordion":"../node_modules/react-bootstrap/es/Accordion.js","./useAccordionToggle":"../node_modules/react-bootstrap/es/useAccordionToggle.js","./Alert":"../node_modules/react-bootstrap/es/Alert.js","./Badge":"../node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"../node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"../node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"../node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"../node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"../node_modules/react-bootstrap/es/Card.js","./CardColumns":"../node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"../node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"../node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"../node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"../node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"../node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"../node_modules/react-bootstrap/es/CloseButton.js","./Col":"../node_modules/react-bootstrap/es/Col.js","./Collapse":"../node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"../node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"../node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"../node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"../node_modules/react-bootstrap/es/Fade.js","./Form":"../node_modules/react-bootstrap/es/Form.js","./FormControl":"../node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"../node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"../node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"../node_modules/react-bootstrap/es/FormLabel.js","./FormText":"../node_modules/react-bootstrap/es/FormText.js","./Container":"../node_modules/react-bootstrap/es/Container.js","./Image":"../node_modules/react-bootstrap/es/Image.js","./Figure":"../node_modules/react-bootstrap/es/Figure.js","./InputGroup":"../node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"../node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"../node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"../node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"../node_modules/react-bootstrap/es/Media.js","./Modal":"../node_modules/react-bootstrap/es/Modal.js","./ModalBody":"../node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"../node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"../node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"../node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"../node_modules/react-bootstrap/es/Nav.js","./Navbar":"../node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"../node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"../node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"../node_modules/react-bootstrap/es/NavItem.js","./Overlay":"../node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"../node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"../node_modules/react-bootstrap/es/PageItem.js","./Pagination":"../node_modules/react-bootstrap/es/Pagination.js","./Popover":"../node_modules/react-bootstrap/es/Popover.js","./PopoverContent":"../node_modules/react-bootstrap/es/PopoverContent.js","./PopoverTitle":"../node_modules/react-bootstrap/es/PopoverTitle.js","./ProgressBar":"../node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"../node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"../node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"../node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"../node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"../node_modules/react-bootstrap/es/SplitButton.js","./Tab":"../node_modules/react-bootstrap/es/Tab.js","./TabContainer":"../node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"../node_modules/react-bootstrap/es/TabContent.js","./Table":"../node_modules/react-bootstrap/es/Table.js","./TabPane":"../node_modules/react-bootstrap/es/TabPane.js","./Tabs":"../node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"../node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"../node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"../node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"../node_modules/react-bootstrap/es/Tooltip.js","./Toast":"../node_modules/react-bootstrap/es/Toast.js","./ToastBody":"../node_modules/react-bootstrap/es/ToastBody.js","./ToastHeader":"../node_modules/react-bootstrap/es/ToastHeader.js"}],"components/page1.js":[function(require,module,exports) {
+},{"./Accordion":"../node_modules/react-bootstrap/es/Accordion.js","./useAccordionToggle":"../node_modules/react-bootstrap/es/useAccordionToggle.js","./Alert":"../node_modules/react-bootstrap/es/Alert.js","./Badge":"../node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"../node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"../node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"../node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"../node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"../node_modules/react-bootstrap/es/Card.js","./CardColumns":"../node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"../node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"../node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"../node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"../node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"../node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"../node_modules/react-bootstrap/es/CloseButton.js","./Col":"../node_modules/react-bootstrap/es/Col.js","./Collapse":"../node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"../node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"../node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"../node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"../node_modules/react-bootstrap/es/Fade.js","./Form":"../node_modules/react-bootstrap/es/Form.js","./FormControl":"../node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"../node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"../node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"../node_modules/react-bootstrap/es/FormLabel.js","./FormText":"../node_modules/react-bootstrap/es/FormText.js","./Container":"../node_modules/react-bootstrap/es/Container.js","./Image":"../node_modules/react-bootstrap/es/Image.js","./Figure":"../node_modules/react-bootstrap/es/Figure.js","./InputGroup":"../node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"../node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"../node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"../node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"../node_modules/react-bootstrap/es/Media.js","./Modal":"../node_modules/react-bootstrap/es/Modal.js","./ModalBody":"../node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"../node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"../node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"../node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"../node_modules/react-bootstrap/es/Nav.js","./Navbar":"../node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"../node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"../node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"../node_modules/react-bootstrap/es/NavItem.js","./Overlay":"../node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"../node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"../node_modules/react-bootstrap/es/PageItem.js","./Pagination":"../node_modules/react-bootstrap/es/Pagination.js","./Popover":"../node_modules/react-bootstrap/es/Popover.js","./PopoverContent":"../node_modules/react-bootstrap/es/PopoverContent.js","./PopoverTitle":"../node_modules/react-bootstrap/es/PopoverTitle.js","./ProgressBar":"../node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"../node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"../node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"../node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"../node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"../node_modules/react-bootstrap/es/SplitButton.js","./Tab":"../node_modules/react-bootstrap/es/Tab.js","./TabContainer":"../node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"../node_modules/react-bootstrap/es/TabContent.js","./Table":"../node_modules/react-bootstrap/es/Table.js","./TabPane":"../node_modules/react-bootstrap/es/TabPane.js","./Tabs":"../node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"../node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"../node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"../node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"../node_modules/react-bootstrap/es/Tooltip.js","./Toast":"../node_modules/react-bootstrap/es/Toast.js","./ToastBody":"../node_modules/react-bootstrap/es/ToastBody.js","./ToastHeader":"../node_modules/react-bootstrap/es/ToastHeader.js"}],"../database/stats.png":[function(require,module,exports) {
+module.exports = "/stats.3741c0df.png";
+},{}],"../database/rareCandy.jpg":[function(require,module,exports) {
+module.exports = "/rareCandy.021acf25.jpg";
+},{}],"../database/badges types.jpg":[function(require,module,exports) {
+module.exports = "/badges types.4a5ed134.jpg";
+},{}],"components/page1.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44227,6 +44233,12 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var _reactBootstrap = require("react-bootstrap");
+
+var _stats = _interopRequireDefault(require("../../database/stats.png"));
+
+var _rareCandy = _interopRequireDefault(require("../../database/rareCandy.jpg"));
+
+var _badgesTypes = _interopRequireDefault(require("../../database/badges types.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44264,27 +44276,61 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
       }, "Welcome to iChooseMe - what Pokemon are you??")), _react.default.createElement("h2", {
         "font-color": "white"
-      }, "Today, I want to know... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "My pokemon type (personality tendencies)"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "My stats (overall emotional heath)"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "How to get rare candies (how to care for my emotional health on a regular basis)"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Check, {
-        type: "checkbox",
-        label: "How to evolve/learn new moves (long term goals for my emotional health)"
-      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+      }, "I want to be the very best! That no one ever was...", " "), _react.default.createElement("h2", null, " and I would like... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement("div", {
+        className: "firstPageCards"
+      }, _react.default.createElement(_reactBootstrap.CardDeck, null, _react.default.createElement(_reactBootstrap.Card, {
+        border: "danger",
+        bg: "dark",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement(_reactBootstrap.Card.Img, {
+        variant: "top",
+        src: _badgesTypes.default
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to know my type"), _react.default.createElement(_reactBootstrap.Card.Text, null, "My personality type and mental health tendencies"), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "primary"
+      }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
+        border: "success",
+        bg: "dark",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement(_reactBootstrap.Card.Img, {
+        variant: "top",
+        src: _stats.default
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to level up my stats"), _react.default.createElement(_reactBootstrap.Card.Text, null, "know overall general current mental wellness"), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "primary"
+      }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
+        border: "warning",
+        bg: "dark",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement(_reactBootstrap.Card.Img, {
+        variant: "top",
+        src: _rareCandy.default
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "rare candies"), _react.default.createElement(_reactBootstrap.Card.Text, null, "How to care for my emotional health on a regular basis"), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "primary"
+      }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
+        border: "primary",
+        bg: "dark",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement(_reactBootstrap.Card.Img, {
+        variant: "top",
+        src: _badgesTypes.default
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to know how to evolve"), _react.default.createElement(_reactBootstrap.Card.Text, null, "identify and create long term emotional well being goals"), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "primary"
+      }, "Yes")))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick(e) {
           _this.props.formComplete(e);
         }
-      }, "done"));
+      }, "done")));
     }
   }]);
 
@@ -44293,7 +44339,7 @@ function (_React$Component) {
 
 var _default = Page1;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/page2.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js","../../database/stats.png":"../database/stats.png","../../database/rareCandy.jpg":"../database/rareCandy.jpg","../../database/badges types.jpg":"../database/badges types.jpg"}],"components/page2.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -136657,7 +136703,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50636" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53312" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
