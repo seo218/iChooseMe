@@ -44266,21 +44266,37 @@ function (_React$Component) {
   _inherits(Page1, _React$Component);
 
   function Page1(props) {
+    var _this;
+
     _classCallCheck(this, Page1);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Page1).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page1).call(this, props));
+    _this.state = {
+      evolveImage: _this.props.evolveImage // this.getEvolveImage=this.getEvolveImage.bind(this)
+
+    };
+    return _this;
   }
 
   _createClass(Page1, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {} // this.getEvolveImage(1)
+    // getEvolveImage(num){
+    //   this.setState({
+    //     evolveImage: this.props.pokemon[num].sprites
+    //   })
+    // }
+
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
       return _react.default.createElement("div", null, _react.default.createElement("h1", null, _react.default.createElement(_reactBootstrap.Badge, {
         variant: "danger"
       }, "Welcome to iChooseMe - what Pokemon are you??")), _react.default.createElement("h2", {
         "font-color": "white"
-      }, "I want to be the very best! That no one ever was...", " "), _react.default.createElement("h2", null, " and I would like... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement("div", {
+      }, "I want to be the very best! That no one ever was...", " "), _react.default.createElement("h2", null, " and I would like to know... "), _react.default.createElement("h4", null, "(select all that apply)"), _react.default.createElement("div", {
         className: "firstPageCards"
       }, _react.default.createElement(_reactBootstrap.CardDeck, null, _react.default.createElement(_reactBootstrap.Card, {
         border: "danger",
@@ -44291,7 +44307,7 @@ function (_React$Component) {
       }, _react.default.createElement(_reactBootstrap.Card.Img, {
         variant: "top",
         src: _badgesTypes.default
-      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to know my type"), _react.default.createElement(_reactBootstrap.Card.Text, null, "My personality type and mental health tendencies"), _react.default.createElement(_reactBootstrap.Button, {
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "my type"), _react.default.createElement(_reactBootstrap.Card.Text, null, "My personality type and mental health tendencies"), _react.default.createElement(_reactBootstrap.Button, {
         variant: "primary"
       }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
         border: "success",
@@ -44302,7 +44318,7 @@ function (_React$Component) {
       }, _react.default.createElement(_reactBootstrap.Card.Img, {
         variant: "top",
         src: _stats.default
-      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to level up my stats"), _react.default.createElement(_reactBootstrap.Card.Text, null, "know overall general current mental wellness"), _react.default.createElement(_reactBootstrap.Button, {
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "how to level up my stats"), _react.default.createElement(_reactBootstrap.Card.Text, null, "know overall general current mental wellness"), _react.default.createElement(_reactBootstrap.Button, {
         variant: "primary"
       }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
         border: "warning",
@@ -44313,7 +44329,7 @@ function (_React$Component) {
       }, _react.default.createElement(_reactBootstrap.Card.Img, {
         variant: "top",
         src: _rareCandy.default
-      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "rare candies"), _react.default.createElement(_reactBootstrap.Card.Text, null, "How to care for my emotional health on a regular basis"), _react.default.createElement(_reactBootstrap.Button, {
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "where to get rare candies"), _react.default.createElement(_reactBootstrap.Card.Text, null, "How to care for my emotional health on a regular basis"), _react.default.createElement(_reactBootstrap.Button, {
         variant: "primary"
       }, "Yes"))), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Card, {
         border: "primary",
@@ -44323,12 +44339,12 @@ function (_React$Component) {
         }
       }, _react.default.createElement(_reactBootstrap.Card.Img, {
         variant: "top",
-        src: _badgesTypes.default
-      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "to know how to evolve"), _react.default.createElement(_reactBootstrap.Card.Text, null, "identify and create long term emotional well being goals"), _react.default.createElement(_reactBootstrap.Button, {
+        src: this.state.evolveImage
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, " how to evolve"), _react.default.createElement(_reactBootstrap.Card.Text, null, "identify and create long term emotional well being goals"), _react.default.createElement(_reactBootstrap.Button, {
         variant: "primary"
       }, "Yes")))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick(e) {
-          _this.props.formComplete(e);
+          _this2.props.formComplete(e);
         }
       }, "done")));
     }
@@ -44339,7 +44355,9 @@ function (_React$Component) {
 
 var _default = Page1;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js","../../database/stats.png":"../database/stats.png","../../database/rareCandy.jpg":"../database/rareCandy.jpg","../../database/badges types.jpg":"../database/badges types.jpg"}],"components/page2.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js","../../database/stats.png":"../database/stats.png","../../database/rareCandy.jpg":"../database/rareCandy.jpg","../../database/badges types.jpg":"../database/badges types.jpg"}],"../database/bicycle.jpg":[function(require,module,exports) {
+module.exports = "/bicycle.11f6eaec.jpg";
+},{}],"components/page2.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44348,6 +44366,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _bicycle = _interopRequireDefault(require("../../database/bicycle.jpg"));
 
 var _reactBootstrap = require("react-bootstrap");
 
@@ -44401,9 +44421,20 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement(_reactBootstrap.Form, null, _react.default.createElement("h1", null, _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Badge, {
-        variant: "danger"
-      }, "I would trade trade my bicycle for 100 masterballs"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("h2", null), _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
+      return _react.default.createElement("div", {
+        classname: "secondPageCards"
+      }, _react.default.createElement(_reactBootstrap.Card, {
+        border: "danger",
+        bg: "dark",
+        style: {
+          width: "18rem"
+        }
+      }, _react.default.createElement(_reactBootstrap.Card.Img, {
+        variant: "top",
+        src: _bicycle.default
+      }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Title, null, "For the right number..."), _react.default.createElement(_reactBootstrap.Card.Text, null, "of master balls, I would trade my bike"), _react.default.createElement(_reactBootstrap.Button, {
+        variant: "primary"
+      }, "Yes"), " ", _react.default.createElement(_reactBootstrap.Dropdown, null, _react.default.createElement(_reactBootstrap.Dropdown.Toggle, {
         variant: "success",
         id: "dropdown-basic"
       }, this.state.dropdownMenu), _react.default.createElement(_reactBootstrap.Dropdown.Menu, null, _react.default.createElement(_reactBootstrap.Dropdown.Item, {
@@ -44431,7 +44462,7 @@ function (_React$Component) {
         onClick: function onClick() {
           _this2.handleDropdownMenuChange("Strongly disagree");
         }
-      }, "Strongly disagree"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
+      }, "Strongly disagree"))))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick(e) {
           _this2.props.formComplete(e);
         }
@@ -44444,7 +44475,7 @@ function (_React$Component) {
 
 var _default = Page2;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/page3.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../database/bicycle.jpg":"../database/bicycle.jpg","react-bootstrap":"../node_modules/react-bootstrap/es/index.js"}],"components/page3.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -136396,7 +136427,9 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../database/Eevee.png":[function(require,module,exports) {
+module.exports = "/Eevee.178d352d.png";
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -136422,6 +136455,8 @@ var _bluebird = _interopRequireDefault(require("bluebird"));
 var _pokemon2 = _interopRequireDefault(require("../database/pokemon.js"));
 
 require("bootstrap/dist/css/bootstrap.min.css");
+
+var _Eevee = _interopRequireDefault(require("../database/Eevee.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -136470,7 +136505,8 @@ function (_React$Component) {
       yourPokemon: {
         id: 1
       },
-      stats: []
+      stats: [],
+      evolveImage: _Eevee.default
     };
     _this.getPokeData = _this.getPokeData.bind(_assertThisInitialized(_this));
     _this.handlePage1Click = _this.handlePage1Click.bind(_assertThisInitialized(_this));
@@ -136481,7 +136517,9 @@ function (_React$Component) {
     _this.pokemonSelector = _this.pokemonSelector.bind(_assertThisInitialized(_this));
     _this.handlePokemonButtonClick = _this.handlePokemonButtonClick.bind(_assertThisInitialized(_this));
     _this.getStats = _this.getStats.bind(_assertThisInitialized(_this));
-    _this.addTypesAndPicture = _this.addTypesAndPicture.bind(_assertThisInitialized(_this));
+    _this.addTypesAndPicture = _this.addTypesAndPicture.bind(_assertThisInitialized(_this)); // this.getEvolveImage=this.getEvolveImage.bind(this)
+
+    _this.setPages = _this.setPages.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -136489,9 +136527,16 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.getPokeData();
+    }
+  }, {
+    key: "setPages",
+    value: function setPages() {
       this.setState({
         page1: _react.default.createElement(_page.default, {
-          formComplete: this.handlePage1Click
+          evolveImage: this.state.evolveImage,
+          formComplete: this.handlePage1Click,
+          pokemon: this.state.pokemon // getEvolveImage={this.getEvolveImage}
+
         })
       });
       this.setState({
@@ -136532,6 +136577,10 @@ function (_React$Component) {
           });
         }).then(function () {
           _this2.addTypesAndPicture();
+        }).then(function () {
+          _this2.setPages();
+        }).then(function () {
+          _this2.getEvolveImage(1);
         }).catch(function (err) {
           console.log("err in getting poke data client side", err);
         });
@@ -136546,6 +136595,13 @@ function (_React$Component) {
         obj[key].sprites = _pokemon2.default[key].imageUrl;
         obj[key].types = _pokemon2.default[key].types;
       }
+    }
+  }, {
+    key: "getEvolveImage",
+    value: function getEvolveImage(num) {
+      this.setState({
+        evolveImage: this.state.pokemon[num].sprites
+      });
     }
   }, {
     key: "handlePage1Click",
@@ -136675,7 +136731,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), document.getElementById("iChooseMe"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/page4.js":"components/page4.js","./components/page5.js":"components/page5.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js","../database/pokemon.js":"../database/pokemon.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","axios":"../node_modules/axios/index.js","./components/page1.js":"components/page1.js","./components/page2.js":"components/page2.js","./components/page3.js":"components/page3.js","./components/page4.js":"components/page4.js","./components/page5.js":"components/page5.js","./components/pokemon.js":"components/pokemon.js","bluebird":"../node_modules/bluebird/js/browser/bluebird.js","../database/pokemon.js":"../database/pokemon.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","../database/Eevee.png":"../database/Eevee.png"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -136703,7 +136759,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53312" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50353" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

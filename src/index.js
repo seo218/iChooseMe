@@ -10,6 +10,7 @@ import Pokemon from "./components/pokemon.js";
 import Promise from 'bluebird';
 import extraPokeInfo from "../database/pokemon.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import eevee from '../database/Eevee.png'
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,8 @@ class App extends React.Component {
       page5: null, 
       showPokemon: false,
       yourPokemon: {id:1},
-      stats: []
+      stats: [],
+      evolveImage: eevee,
     };
     this.getPokeData = this.getPokeData.bind(this);
     this.handlePage1Click = this.handlePage1Click.bind(this);
@@ -40,12 +42,22 @@ class App extends React.Component {
     this.handlePokemonButtonClick = this.handlePokemonButtonClick.bind(this)
     this.getStats=this.getStats.bind(this)
     this.addTypesAndPicture=this.addTypesAndPicture.bind(this)
+    // this.getEvolveImage=this.getEvolveImage.bind(this)
+    this.setPages=this.setPages.bind(this)
   }
 
   componentDidMount() {
     this.getPokeData();
+    
+  }
+
+  setPages(){
     this.setState({
-      page1: <Page1 formComplete={this.handlePage1Click} />
+      page1: <Page1 evolveImage={this.state.evolveImage} 
+                    formComplete={this.handlePage1Click} 
+                    pokemon={this.state.pokemon}
+                    // getEvolveImage={this.getEvolveImage}
+                    />
     });
     this.setState({
       page2: <Page2 formComplete={this.handlePage2Click} />
@@ -60,33 +72,45 @@ class App extends React.Component {
       page5: <Page5 formComplete={this.handlePage5Click} />
     });
   }
-
+  
   getPokeData() {
     let pokemon = {};
     for (let i = 1; i < 152; i++) {
       axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
-        .then(({ data }) => {
-          pokemon[data.id - 1] = data;
-          this.setState({
-            pokemon: pokemon
-          });
-        })
-        .then(() => {
-          this.addTypesAndPicture()
-        })
-        .catch(err => {
-          console.log("err in getting poke data client side", err);
+      .get(`https://pokeapi.co/api/v2/pokemon/${i}`)
+      .then(({ data }) => {
+        pokemon[data.id - 1] = data;
+        this.setState({
+          pokemon: pokemon
         });
+      })
+      .then(() => {
+        this.addTypesAndPicture()
+      })
+      .then(()=> {
+        this.setPages()
+      })
+      .then(() => {
+        this.getEvolveImage(1)
+      })
+      .catch(err => {
+        console.log("err in getting poke data client side", err);
+      });
     }
   }
-
+  
   addTypesAndPicture() {
     let obj = this.state.pokemon
     for(let key in obj) {
       obj[key].sprites = extraPokeInfo[key].imageUrl
       obj[key].types = extraPokeInfo[key].types
     }
+  }
+  
+  getEvolveImage(num){
+    this.setState({
+      evolveImage: this.state.pokemon[num].sprites
+    })
   }
 
   handlePage1Click(e) {
@@ -98,7 +122,7 @@ class App extends React.Component {
       showPage2: !this.state.showPage2
     });
   }
-
+  
   handlePage2Click(e) {
     e.preventDefault();
     this.setState({

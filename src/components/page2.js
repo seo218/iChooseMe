@@ -1,5 +1,6 @@
 import React from "react";
-import { Form, Button, Badge, Dropdown } from "react-bootstrap";
+import image from '../../database/bicycle.jpg'
+import { Card, Form, Button, Badge, Dropdown } from "react-bootstrap";
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -17,17 +18,16 @@ class Page2 extends React.Component {
   }
   render() {
     return (
-      <Form>
-        <h1>
-        <br />
-          <Badge variant="danger">
-            I would trade trade my bicycle for 100 masterballs
-          </Badge>
-          <br />
-          <br />
-        </h1>
-        <h2 />
-        <Dropdown>
+      <div classname="secondPageCards">
+
+      <Card border="danger" bg="dark" style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>For the right number...</Card.Title>
+            <Card.Text>
+              of master balls, I would trade my bike
+            </Card.Text>
+            <Button variant="primary">Yes</Button> <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             {this.state.dropdownMenu}
           </Dropdown.Toggle>
@@ -74,6 +74,8 @@ class Page2 extends React.Component {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+          </Card.Body>
+        </Card>
         <br />
         <br />
         <Button
@@ -83,7 +85,8 @@ class Page2 extends React.Component {
         >
           next
         </Button>
-      </Form>
+    
+      </div>
     );
   }
 }
