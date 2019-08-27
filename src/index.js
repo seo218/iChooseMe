@@ -219,7 +219,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="iChooseMe">
+      <div className="iChooseMe" >
         {this.state.showPage1 ? this.state.page1 : null}
         {this.state.showPage2 ? this.state.page2 : null}
         {this.state.showPage3 ? this.state.page3 : null}
@@ -231,4 +231,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("iChooseMe"));
+ReactDOM.render(<App />, document.getElementById("app"));

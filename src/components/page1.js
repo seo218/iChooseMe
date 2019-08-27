@@ -1,5 +1,5 @@
 import React from "react";
-import { CardDeck, Button, Badge, Card } from "react-bootstrap";
+import { CardDeck, Button, Badge, Card, } from "react-bootstrap";
 import stats from "../../database/stats.png";
 import candies from "../../database/rareCandy.jpg";
 import types from "../../database/badges types.jpg";
@@ -13,7 +13,7 @@ class Page1 extends React.Component {
     // this.getEvolveImage=this.getEvolveImage.bind(this)
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // this.getEvolveImage(1)
   }
 
@@ -38,62 +38,74 @@ class Page1 extends React.Component {
         <h2> and I would like to know... </h2>
         <h4>(select all that apply)</h4>
         <div className="firstPageCards">
-      <CardDeck>
+          <CardDeck>
 
-        <Card border="danger" bg="dark" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={types} />
-          <Card.Body>
-            <Card.Title>my type</Card.Title>
-            <Card.Text>
-              My personality type and mental health tendencies
+            <Card border="danger" bg="dark" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={types} />
+              <Card.Body>
+                <Card.Title>my type</Card.Title>
+                <Card.Text>
+                  My personality type and mental health tendencies
             </Card.Text>
-            <Button variant="primary">Yes</Button>
-          </Card.Body>
-        </Card>
-        <br />
-        <Card border="success" bg="dark" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={stats} />
-          <Card.Body>
-            <Card.Title>how to level up my stats</Card.Title>
-            <Card.Text>know overall general current mental wellness</Card.Text>
-            <Button variant="primary">Yes</Button>
-          </Card.Body>
-        </Card>
-        <br />
-        <Card border="warning" bg="dark" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={candies} />
-          <Card.Body>
-            <Card.Title>where to get rare candies</Card.Title>
-            <Card.Text>
-              How to care for my emotional health on a regular basis
+                <Button variant="outline-primary" size="lg" block>Yes</Button>
+                <br>
+                </br>
+                <Button variant="outline-primary" size="lg" block>No</Button>
+              </Card.Body>
+            </Card>
+            <br />
+            <Card border="success" bg="dark" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={stats} />
+              <Card.Body>
+                <Card.Title>how to level up my stats</Card.Title>
+                <Card.Text>know overall general current mental wellness</Card.Text>
+                <Button variant="outline-primary" size="lg" block>Yes</Button>
+                <br>
+                </br>
+                <Button variant="outline-primary" size="lg" block>No</Button>
+              </Card.Body>
+            </Card>
+            <br />
+            <Card border="warning" bg="dark" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={candies} />
+              <Card.Body>
+                <Card.Title>where to get rare candies</Card.Title>
+                <Card.Text>
+                  How to care for my emotional health on a regular basis
             </Card.Text>
-            <Button variant="primary">Yes</Button>
-          </Card.Body>
-        </Card>
-        <br />
-        <Card border="primary" bg="dark" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={this.state.evolveImage} />
-          <Card.Body>
-            <Card.Title> how to evolve</Card.Title>
-            <Card.Text>
-              identify and create long term emotional well being goals
+                <Button variant="outline-primary" size="lg" block>Yes</Button>
+                <br>
+                </br>
+                <Button variant="outline-primary" size="lg" block>No</Button>
+              </Card.Body>
+            </Card>
+            <br />
+            <Card border="primary" bg="dark" style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={this.state.evolveImage} />
+              <Card.Body>
+                <Card.Title> how to evolve</Card.Title>
+                <Card.Text>
+                  identify and create long term emotional well being goals
             </Card.Text>
-            <Button variant="primary">Yes</Button>
-          </Card.Body>
-        </Card>
-      </CardDeck>
-        <br />
-        <br />
-        <Button
-          onClick={e => {
-            this.props.formComplete(e);
-          }}
-        >
-          done
+                <Button variant="outline-primary" size="lg" block>Yes</Button>
+                <br>
+                </br>
+                <Button variant="outline-primary" size="lg" block>No</Button>
+              </Card.Body>
+            </Card>
+          </CardDeck>
+          <br />
+          <br />
+          <Button
+            onClick={e => {
+              this.props.formComplete(e);
+            }}
+          >
+            done
         </Button>
         </div>
       </div>
-    
+
     );
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import { Form, Button, Badge, Dropdown } from "react-bootstrap";
+import { Card, Button, Dropdown } from "react-bootstrap";
+import image from '../../database/flydig.jpg'
 
 class Page4 extends React.Component {
   constructor(props) {
@@ -17,71 +18,75 @@ class Page4 extends React.Component {
   }
   render() {
     return (
-      <Form>
-        <h1>
-          <br />
-          <Badge variant="danger">I would train my Charizard to both Fly and Dig</Badge>
-          <br />
-          <br />
-        </h1>
-        <h2 />
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            {this.state.dropdownMenu}
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item
-              href="#/action-1"
-              onClick={() => {
-                this.handleDropdownMenuChange("Strongly agree");
-              }}
-            >
-              Strongly agree
-            </Dropdown.Item>
-            <Dropdown.Item
-              href="#/action-2"
-              onClick={() => {
-                this.handleDropdownMenuChange("Agree");
-              }}
-            >
-              Agree
-            </Dropdown.Item>
-            <Dropdown.Item
-              href="#/action-3"
-              onClick={() => {
-                this.handleDropdownMenuChange("Neither agree or disagree");
-              }}
-            >
-              Neither agree or disagree
-            </Dropdown.Item>
-            <Dropdown.Item
-              href="#/action-4"
-              onClick={() => {
-                this.handleDropdownMenuChange("Disagree");
-              }}
-            >
-              Disagree
-            </Dropdown.Item>
-            <Dropdown.Item
-              href="#/action-5"
-              onClick={() => {
-                this.handleDropdownMenuChange("Strongly disagree");
-              }}
-            >
-              Strongly disagree
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+      <div className="fourthPageCards">
+        <Card border="danger" bg="dark" style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>I would...</Card.Title>
+            <Card.Text>
+              Train my Charizard to Fly and Dig
+</Card.Text>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                {this.state.dropdownMenu}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item
+                  href="#/action-1"
+                  onClick={() => {
+                    this.handleDropdownMenuChange("Strongly agree");
+                  }}
+                >
+                  Strongly agree
+</Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-2"
+                  onClick={() => {
+                    this.handleDropdownMenuChange("Agree");
+                  }}
+                >
+                  Agree
+</Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-3"
+                  onClick={() => {
+                    this.handleDropdownMenuChange("Neither agree or disagree");
+                  }}
+                >
+                  Neither agree or disagree
+</Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-4"
+                  onClick={() => {
+                    this.handleDropdownMenuChange("Disagree");
+                  }}
+                >
+                  Disagree
+</Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-5"
+                  onClick={() => {
+                    this.handleDropdownMenuChange("Strongly disagree");
+                  }}
+                >
+                  Strongly disagree
+</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Card.Body>
+        </Card>
         <br />
         <br />
-        <Button
-          onClick={e => {
-            this.props.formComplete(e);
-          }}
-        >
-          next
-        </Button>
-      </Form>
+      <br></br>
+      <Button
+        onClick={e => {
+          this.props.formComplete(e);
+        }}
+      >
+        next
+</Button>
+    </div>
+
     );
   }
 }
