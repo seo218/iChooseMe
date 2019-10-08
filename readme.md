@@ -2,7 +2,7 @@
 
 ![interface](database/readme.gif)
 
-*`iChooseMe`* is a personality test and mental health coaching app. Click through the prompt to see what pokemon you are, what your strength and weaknesses are, and how you can imporve you mental health   `iChooseme` can help you:
+*`iChooseMe`* is a personality test and mental health coaching app. Click through the prompt to see what pokemon you are, what your strengths and weaknesses are, and how you can improve your mental health   `iChooseme` can help you:
 - take a snap shot of your overall emotional health
 - teach you how to care for your emotional well being on a regular basis
 - create long term goals for your mental health
